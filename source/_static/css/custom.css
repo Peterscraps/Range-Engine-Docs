@@ -76,6 +76,12 @@ a:visited{
 .wy-menu-vertical li.toctree-l3:hover, .wy-menu-vertical li.toctree-l4 {
   background-color: #5b5b5b;
 }
+.wy-menu-vertical li.toctree-l3.current > a, .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
+  background: transparent;
+}
+.wy-menu-vertical li.toctree-l3.current > a, .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a:hover {
+  background: #838383;
+}
 .wy-menu-vertical li.current a {
   border-right: none;
 }
@@ -100,12 +106,10 @@ a:visited{
   background: #fff;
   border: 1px solid #e1e4e5;
   font-size: 75%;
-  padding: 0 5px;
   padding-right: 5px;
   padding-left: 5px;
   font-family: Roboto,Menlo,Monaco,Consolas,Liberation Mono,Courier New,Courier,monospace;
   color: #e74c3c;
-  overflow-x: auto;
 }
 .btn-neutral {
   background-color: #fff0 !important;
@@ -209,6 +213,32 @@ html.writer-html4 .rst-content dl:not(.docutils) > dt, html.writer-html5 .rst-co
 html.writer-html4 .rst-content dl:not(.docutils) > dt .headerlink, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) > dt .headerlink {
   color: #ececec;
 }
+html.writer-html4 .rst-content dl:not(.docutils) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) > dt {
+  /*background: #202224;*/
+  color: #e8e8e8;
+  border-top: none;
+  padding: 9px 120px 9px 10px;
+  font-size: 17px;
+  border-radius: 3px;
+}
+html.writer-html4 .rst-content dl:not(.docutils) dl:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) dl:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) > dt {
+  margin-bottom: 6px;
+  border: none;
+  border-left: 3px solid rgb(219, 41, 41);
+  background: #1a1a1a;
+  color: #555;
+}
+html.writer-html4 .rst-content dl:not(.docutils) dl:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) > dt .headerlink, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) dl:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) > dt .headerlink {
+  color: rgb(218, 218, 218);
+}
+.rst-content code.literal, .rst-content tt.literal {
+  white-space: normal;
+  background: transparent;
+  border-radius: 15px;
+  border-color: #646464;
+  font-weight: bold;
+}
+
 
 /*warning*/
 .fa-exclamation-circle::before, .rst-content .admonition-title::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before {
